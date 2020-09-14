@@ -1,0 +1,30 @@
+using System;
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Quantos estudantes você tem?");
+            int numEstudantes = Convert.ToInt16(Console.ReadLine());
+            
+            string[] estudantes = new string[numEstudantes];
+
+            Console.WriteLine("Insira os nomes dos estudantes:");
+
+            for (int i = 0; i < estudantes.Length; i++)
+            {
+                estudantes[i] = Console.ReadLine();
+            }
+            Console.WriteLine("\n----------------");
+            Array.Sort(estudantes);
+            for (int i = 0; i < estudantes.Length; i++)
+            {
+                Console.WriteLine(estudantes[i]);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
