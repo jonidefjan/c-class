@@ -1,0 +1,26 @@
+using System;
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Contador de palavras:");
+            string frase = Console.ReadLine();
+
+            int tamanho = Counter(frase);
+
+            Console.WriteLine("sua frase tem: " + tamanho);
+
+
+            Console.ReadKey();
+        }
+
+        static int Counter(string frase)
+        {
+            int tamanho = frase.Split(' ').Length;
+            return tamanho;
+        }
+    }
+}
