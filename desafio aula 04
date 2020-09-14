@@ -1,0 +1,33 @@
+using System;
+
+namespace My_Awesome_Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random numberGen = new Random();    
+            
+            int roll01 = 0;
+            int roll02 = 1;
+            int attempts = 0;
+
+            Console.WriteLine("press any key to roll the dice");
+
+            while (roll01 != roll02)
+            {
+                Console.ReadKey();
+
+                roll01 = numberGen.Next(1, 7);
+                roll02 = numberGen.Next(1, 7);
+
+                Console.WriteLine("you rolled dice 1: " + roll01);
+                Console.WriteLine("you rolled dice 2: " + roll02);
+                attempts++;
+            }
+            Console.WriteLine("the number of attempts is " + attempts + " attemps!");
+
+            Console.ReadKey();
+        }
+    }
+}
